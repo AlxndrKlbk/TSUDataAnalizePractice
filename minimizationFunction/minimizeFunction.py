@@ -1,6 +1,6 @@
 from scipy import optimize as opt
 import math
-
+import matplotlib
 
 def function_for_minimize(x):
     return math.sin(x/5) * math.exp(x/10) + 5 * math.exp(-x/2)

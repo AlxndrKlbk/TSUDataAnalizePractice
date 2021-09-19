@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Пункт 1
-dataFile = open("csv_data.txt", "r", encoding="UTF-8")
+dataFile = open("Ex24.txt", "r", encoding="UTF-8")
 frame = pd.read_csv(dataFile, sep='\t', header=0, encoding="UTF-8")
 
 # Пункт 2
@@ -85,4 +85,6 @@ for i in range(countLines):
 
 print('Пункт 9:', '\n', zadolznik, '\n')
 
-frame.to_csv()
+resultFile = open("result.txt", "w")
+frame.to_csv(resultFile, sep="\t")
+resultFile.close()
